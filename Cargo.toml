@@ -6,6 +6,10 @@ authors = ["aondoakuranashima-tech"]
 description = "Nexa OS - a Rust-powered operating system for RISC-V"
 license = "MIT"
 
+[[bin]]
+name = "nexa-kernel"
+path = "kernel/src/main.rs"
+
 [profile.dev]
 panic = "abort"
 
