@@ -1,12 +1,14 @@
 #![no_std]
 #![no_main]
 
+use core::arch::global_asm;
 use core::panic::PanicInfo;
+
+global_asm!(include_str!("entry.S"));
 
 const UART0: usize = 0x1000_0000;
 
 #[no_mangle]
-#[link_section = ".text.entry"]
 pub extern "C" fn rust_main(hart_id: usize, _dtb: usize) -> ! {
     uart_write("\nNEXA OS\n");
     uart_write("========\n");
