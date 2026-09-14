@@ -1,0 +1,16 @@
+[package]
+name = "nexa-os"
+version = "0.1.0"
+edition = "2024"
+authors = ["aondoakuranashima-tech"]
+description = "Nexa OS - a Rust-powered operating system for RISC-V"
+license = "MIT"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true
+codegen-units = 1
