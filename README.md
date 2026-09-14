@@ -11,8 +11,6 @@ Nexa OS is a Rust-powered operating system targeting 64-bit RISC-V.
 - Kernel entry: RISC-V assembly → Rust
 - Console: QEMU UART at `0x10000000`
 
-The QEMU `virt` machine is a standard RISC-V development platform, and OpenSBI provides the SBI layer between machine-mode firmware and supervisor-mode operating systems. citeturn0search0turn0search12
-
 ## Project status
 
 ### v0.1 — Kernel foundation
